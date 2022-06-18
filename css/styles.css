@@ -737,6 +737,10 @@ img {
   cursor: pointer;
 }
 
+.modal-btn:hover {
+  fill: var(--accent-color);
+}
+
 /* form */
 
 .form {
@@ -837,7 +841,7 @@ img {
 .checbox-label::before {
   display: block;
   content: "";
-  border:1px solid var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
   border-radius: 2px;
   width: 16px;
   height: 15px;
@@ -845,10 +849,14 @@ img {
   transition: background-image 250ms --timing-function;
 }
 
-.checkbox-input:focus + .checbox-label::before {
+.checkbox-input:checked + .checbox-label::before {
   background-image: url(../images/icon\ check.svg);
   background-position: center;
   background-size: cover;
+  border-color: var(--accent-color);
+}
+
+.checkbox-input:focus + .checbox-label::before {
   border-color: var(--accent-color);
 }
 
